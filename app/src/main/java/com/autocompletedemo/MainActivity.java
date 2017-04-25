@@ -35,22 +35,17 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity
 {
     AutoCompleteTextView autoCompleteTextView1;
-    RestaurantListAdapter adapter;
     ActionBar actionbar;
     TextView tvRestuarantsCount;
     ListView list;
     ProgressDialog pDialog;
-    String adminarea, jsonStr, cuisine_selected = "-1", cuisine_selected_name = "All", jsonStr1;
-    JSONObject json, json1;
-    JSONArray restaurant_data = null, res_categories = null;
+    String jsonStr;
+    JSONObject json;
+    JSONArray restaurant_data = null;
 
     String categorystr = "";
     String[] available_categories;
     ArrayList<RestaurantList> restaurant_list;
-
-    ArrayList<String> cuisineid_array;
-    ArrayList<String> cuisinename_array;
-    boolean isChecked = false;
 
     String[] restidarr, restnamearr;
 
@@ -135,50 +130,8 @@ public class MainActivity extends AppCompatActivity
                         categorystr = "";
                         JSONObject a = restaurant_data.getJSONObject(i);
 
-                    //    String rest_id = a.getString("rest_id");
                         String rest_name = a.getString("name");
                         restnamearr[i] = rest_name;
-                   //     restidarr[i] = rest_id;
-                        //        Log.e("rest_name","" + rest_name);
-                /*        String adress = a.getString("adress");
-                        String city = a.getString("city");
-                        String state = a.getString("state");
-                        String country = a.getString("country");
-                        String email_id = a.getString("email_id");
-                        String is_pickup = a.getString("is_pickup");
-                        String is_delivery = a.getString("is_delivery");
-                        String sys_delivery = a.getString("sys_delivery");
-                        String is_preorder = a.getString("is_preorder");
-                        String rest_image = getResources().getString(R.string.images) + a.getString("image");
-                        String newstring =	rest_image.replace("\"/", "/");
-                        String rest_area = a.getString("rest_area");
-                        String minimum_order = a.getString("minimum_order");
-
-                        RestaurantList restaurant = new RestaurantList();
-
-
-                            restaurant.setRestID(rest_id);
-                            restaurant.setRestName(rest_name);
-                            restaurant.setAddress(adress);
-                            restaurant.setCity(city);
-                            restaurant.setState(state);
-                            restaurant.setCountry(country);
-                            restaurant.setEmail(email_id);
-                            restaurant.setIsPickup(is_pickup);
-                            restaurant.setIsDelivery(is_delivery);
-                            restaurant.setSysDelivery(sys_delivery);
-                            restaurant.setIsPreorder(is_preorder);
-                            restaurant.setRestImage(newstring);
-                            restaurant.setRestArea(rest_area);
-                            restaurant.setDelMinimumOrder(minimum_order);
-
-
-                                restaurant.setRatingImage("");
-
-
-
-                        restaurant_list.add(restaurant);
-                        */
                     }
                 }
             }
@@ -202,12 +155,6 @@ public class MainActivity extends AppCompatActivity
                 autoCompleteTextView1.setAdapter(adapterauto);
 
                 tvRestuarantsCount.setText("(" + restaurant_data.length() + ") Results");
-
-          //      adapter = new RestaurantListAdapter(MainActivity.this,
-          //              R.layout.hotels_v, restaurant_list);
-          //      list.setAdapter(adapter);
-                //      UtilityListView.setListViewHeightBasedOnChildren(list);
-                //list.setOnItemClickListener(listViewOnClick);
             }
             else
             {
