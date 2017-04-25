@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AutoCompleteDemo</string>
+
+    <string name="loading_content">Loading Content..</string>
+    <string name="internet">You Do not have Internet Connection!</string>
+
+    <!-- API -->
+    <string name="products">http://ontique.in/api/products/key/12334</string>
+    <string name="images">http://mealhi5.com/images/restaurant/</string>
+
+</resources>

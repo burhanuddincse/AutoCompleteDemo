@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/add_sub_press"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="34px"
+        android:id="@+id/tvName"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <ImageView
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:id="@+id/ivThumb"
+            android:src="@drawable/no_image"
+            android:padding="2dp"
+            android:background="@drawable/image_border"
+            android:scaleType="fitCenter" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:id="@+id/linearRating">
+
+                <ImageView
+                    android:layout_width="148px"
+                    android:layout_height="30px"
+                    android:id="@+id/ivStars"
+                    android:src="@drawable/no_stars"
+                    android:scaleType="fitCenter"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="241"
+                    android:textSize="24px"
+                    android:id="@+id/tvReviewsCount"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/reviwes_color"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:textSize="30px"
+                android:id="@+id/tvAddress" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Minimum Order"
+                android:textSize="26px"
+                android:id="@+id/tvMinimumOrder"
+                android:visibility="gone"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:visibility="gone"
+                android:id="@+id/tvCategorystr" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvPickup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/address"
+                    android:layout_below="@+id/textView1"
+                    android:singleLine="true"
+                    android:text="PICK UP"
+                    android:textColor="@color/green"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:id="@+id/tvDelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tvPickup"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@+id/tvPickup"
+                    android:singleLine="true"
+                    android:text="DELIVERY"
+                    android:textColor="@color/red"
+                    android:textSize="24px"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
