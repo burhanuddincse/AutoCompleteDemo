@@ -6,6 +6,5 @@
 
     <!-- API -->
     <string name="products">http://ontique.in/api/products/key/12334</string>
-    <string name="images">http://mealhi5.com/images/restaurant/</string>
 
 </resources>

@@ -16,21 +16,16 @@ import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.autocompletedemo.adapter.RestaurantListAdapter;
 import com.autocompletedemo.global.JSONfunctions;
 import com.autocompletedemo.global.Ultils;
-import com.autocompletedemo.model.RestaurantList;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
 {
@@ -45,7 +40,6 @@ public class MainActivity extends AppCompatActivity
 
     String categorystr = "";
     String[] available_categories;
-    ArrayList<RestaurantList> restaurant_list;
 
     String[] restidarr, restnamearr;
 
@@ -124,7 +118,6 @@ public class MainActivity extends AppCompatActivity
                     restnamearr = new String[restaurant_data.length()];
                     restidarr = new String[restaurant_data.length()];
 
-                    restaurant_list = new ArrayList<RestaurantList>();
                     for(int i=0; i<restaurant_data.length(); i++)
                     {
                         categorystr = "";
